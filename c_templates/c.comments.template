@@ -13,27 +13,28 @@
  *  <CURSOR>
  *-----------------------------------------------------------------------------*/
 == Comments.function == map:cfu, shortcut:f  ==
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  |?FUNCTION_NAME|
- *  Description:  <CURSOR>
- * =====================================================================================
- */
+/***********************************************************************
+ * Description: <CURSOR>
+ * Input:
+ * Output:
+ * Return:
+ ***********************************************************************/
 == Comments.method == map:cme, shortcut:m  ==
-/*
- *--------------------------------------------------------------------------------------
- *       Class:  |?CLASSNAME|
- *      Method:  |?CLASSNAME| :: |?METHODNAME|
- * Description:  <CURSOR>
- *--------------------------------------------------------------------------------------
- */
+/***********************************************************************
+ * Description: <CURSOR>
+ * Input:
+ * Output:
+ * Return:
+ ***********************************************************************/
 == Comments.class == map:ccl, shortcut:c  ==
-/*
- * =====================================================================================
- *        Class:  |?CLASSNAME|
- *  Description:  <CURSOR>
- * =====================================================================================
- */
+/***********************************************************************
+ * Classname:|?CLASSNAME|
+ * Description: <CURSOR>
+ * Date: |DATE|
+ * Author: |AUTHOR|
+ * History:
+ *   |AUTHOR| |DATE|  1.0   created
+ ***********************************************************************/
 == ENDTEMPLATE ==
 
 § -------------------------------------------------------------
@@ -43,42 +44,31 @@
 == SEP: Comments.sep_file ==
 
 == Comments.file description impl == map:cfdi, shortcut:c, start, noindent ==
-/*
- * =====================================================================================
+/***********************************************************************
+ *      Filename:  |FILENAME|
+ *   Description:  <CURSOR>
+ *          Date:  |DATE| |TIME|
+ *        Author:  |AUTHOR|
+ *       Version:  1.0
  *
- *       Filename:  |FILENAME|
+ * |COPYRIGHT|
  *
- *    Description:  <CURSOR>
- *
- *        Version:  1.0
- *        Created:  |DATE| |TIME|
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  |AUTHOR| (|AUTHORREF|), |EMAIL|
- *   Organization:  |ORGANIZATION|
- *
- * =====================================================================================
- */
+ *       History:  |AUTHOR| |DATE| 1.0 created
+ ***********************************************************************/
 
 == Comments.file description header == map:cfdh, shortcut:h, start, noindent ==
-/*
- * =====================================================================================
+/***********************************************************************
+ *      Filename:  |FILENAME|
+ *   Description:  <CURSOR>
+ *          Date:  |DATE| |TIME|
+ *        Author:  |AUTHOR|
+ *       Version:  1.0
  *
- *       Filename:  |FILENAME|
+ * |COPYRIGHT|
  *
- *    Description:  <CURSOR>
- *
- *        Version:  1.0
- *        Created:  |DATE| |TIME|
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  |AUTHOR| (|AUTHORREF|), |EMAIL|
- *   Organization:  |ORGANIZATION|
- *
- * =====================================================================================
- */
+ *       History:  |AUTHOR| |DATE| 1.0 created
+ ***********************************************************************/
+
 == ENDTEMPLATE ==
 
 == LIST: comments_c_sections == hash ==

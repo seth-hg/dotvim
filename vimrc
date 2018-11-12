@@ -87,34 +87,32 @@ let g:clang_format#style_options = {
         \ "BasedOnStyle": "Google",
         \ "IndentWidth" : 4}
 
+" c-support templates
+let g:C_CustomTemplateFile="~/.vim/c_templates/Templates"
+
 function SetupCppEnv ()
     set number      " 显示行号
     set expandtab   " 展开TAB
-    let g:clang_format#auto_format_on_insert_leave=1
+
+    let g:clang_format#auto_format_on_insert_leave=0
 
     " map to <Leader>cf in C++ code
     nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
     vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
     " if you install vim-operator-user
-    map <buffer><Leader>x <Plug>(operator-clang-format)
+    "map <buffer><Leader>x <Plug>(operator-clang-format)
 
     " Toggle auto formatting:
     nmap <Leader>C :ClangFormatAutoToggle<CR>
-    " TAB键格式化选中区域
-    "vmap <TAB> :ClangFormat<CR>
-    " 普通模式下TAB键格式化当前行
-    "nmap <TAB> :ClangFormat<CR>
 
     " auto enable clang-format
-    ClangFormatAutoEnable
-
-	" c-support
-	" let g:C_CustomTemplateFile="~/.vim/c_templates/Templates"
-
+    "ClangFormatAutoEnable
 endfunction
 
 autocmd FileType c,cpp,cc,h,hpp call SetupCppEnv()
+" 新建文件时开启自动格式化功能
+au BufNewFile *.c,*.cpp,*.cc,*.h,*.hpp ClangFormatAutoEnable
 
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
